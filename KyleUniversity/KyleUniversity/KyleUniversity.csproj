@@ -133,6 +133,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
@@ -164,6 +165,10 @@
     <Compile Include="Migrations\201407111353147_DepartmentSP.cs" />
     <Compile Include="Migrations\201407111353147_DepartmentSP.Designer.cs">
       <DependentUpon>201407111353147_DepartmentSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201407111544513_RowVersion.cs" />
+    <Compile Include="Migrations\201407111544513_RowVersion.Designer.cs">
+      <DependentUpon>201407111544513_RowVersion.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
@@ -200,6 +205,11 @@
     <Content Include="Views\Instructor\Details.cshtml" />
     <Content Include="Views\Instructor\Edit.cshtml" />
     <Content Include="Views\Instructor\Index.cshtml" />
+    <Content Include="Views\Department\Create.cshtml" />
+    <Content Include="Views\Department\Edit.cshtml" />
+    <Content Include="Views\Department\Delete.cshtml" />
+    <Content Include="Views\Department\Details.cshtml" />
+    <Content Include="Views\Department\Index.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
@@ -261,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201407111353147_DepartmentSP.resx">
       <DependentUpon>201407111353147_DepartmentSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407111544513_RowVersion.resx">
+      <DependentUpon>201407111544513_RowVersion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

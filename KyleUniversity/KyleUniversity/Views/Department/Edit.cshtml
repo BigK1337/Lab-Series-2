@@ -16,6 +16,7 @@
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.DepartmentID)
+        @Html.HiddenFor(Model => Model.RowVersion)
 
         <div class="form-group">
             @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
@@ -44,7 +45,7 @@
         <div class="form-group">
             <label class="control-label col-md-2" for="InstructorID">Administrator</label>
             <div class="col-md-10">
-                @Html.DropDownList("Administrator", String.Empty)
+                @Html.DropDownList("Administrator", ViewBag.InstructorID as IEnumerable<SelectListItem>, String.Empty)
                 @Html.ValidationMessageFor(model => model.InstructorID)
             </div>
         </div>
