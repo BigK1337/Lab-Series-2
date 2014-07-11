@@ -162,6 +162,10 @@
     <Compile Include="Migrations\201407081843214_ComplexDataModel.Designer.cs">
       <DependentUpon>201407081843214_ComplexDataModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201407111353147_DepartmentSP.cs" />
+    <Compile Include="Migrations\201407111353147_DepartmentSP.Designer.cs">
+      <DependentUpon>201407111353147_DepartmentSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Department.cs" />
@@ -260,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201407081843214_ComplexDataModel.resx">
       <DependentUpon>201407081843214_ComplexDataModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407111353147_DepartmentSP.resx">
+      <DependentUpon>201407111353147_DepartmentSP.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

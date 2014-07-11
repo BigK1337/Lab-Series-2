@@ -50,7 +50,7 @@ namespace KyleUniversity.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include="DepartmentID,Name,Budget,StartDate,InstructorID")] Department department)
+        public async Task<ActionResult> Create(Department department)
         {
             if (ModelState.IsValid)
             {
@@ -84,7 +84,7 @@ namespace KyleUniversity.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include="DepartmentID,Name,Budget,StartDate,InstructorID")] Department department)
+        public async Task<ActionResult> Edit(Department department)
         {
             if (ModelState.IsValid)
             {
@@ -114,9 +114,8 @@ namespace KyleUniversity.Controllers
         // POST: /Department/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(int id)
+        public async Task<ActionResult> DeleteConfirmed(Department department)
         {
-            Department department = await db.Departments.FindAsync(id);
             db.Departments.Remove(department);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
